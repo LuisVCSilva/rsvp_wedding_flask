@@ -1,9 +1,13 @@
 {% extends "layout.html" %}
 {% block payload %}
-<h1>Casamento da Ana Luísa e Luis Vinicius<br /><small>12 de julho de 2025</small></h1>
+<h1>Casamento da Ana Luísa e Luis Vinicius<br /><small>12 de julho de 2025 às 17h</small></h1>
 <p class="lead">Bem-vindos ao nosso site de casamento!</p>
 <p>Neste site, vocês podem encontrar informações sobre os locais, presentes de casamento e todos os outros detalhes importantes. Caso tenham alguma dúvida, acessem a seção <a href="{{ url_for('contato') }}">Contato</a>, onde encontrarão nossos contatos.</p>
 <p>Esperamos por vocês com carinho!</p>
+<center>
 <img src="{{ url_for('static', filename='img/loop_neg.gif') }}" alt="" class="img-rounded img-responsive">
+</center>
+
+<h5><p align="right"><i>“Assim, permanecem agora estes três: a fé, a esperança e o amor. O maior deles, porém, é o amor.” – Coríntios 13:13<i></p></h5>
 {% endblock %}
 

@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 {% block payload %}
 <h1>Lista de Presentes</h1>
-<p>Para completar o nosso lar, ainda faltam algumas coisas, que vocês podem encontrar na lista de presentes abaixo. Os itens podem ser reservados, garantindo que não receberemos o mesmo presente mais de uma vez. Além disso, há algumas coisas que gostaríamos de escolher pessoalmente.</p>
-<p>Por isso, pedimos que, caso não encontre algo na nossa lista que gostaria de nos presentear, contribua com um "presente em envelope" para a nossa vida juntos &ndash; e traga junto o seu livro favorito como presente, para que nossa biblioteca familiar tenha um exemplar que sempre nos faça lembrar de você!</p>
+<p>Para completar o nosso lar, ainda faltam algumas coisas, que vocês podem encontrar na lista de presentes abaixo. Os itens podem ser reservados, garantindo que não receberemos o mesmo presente mais de uma vez.</p>
+<p>Caso queira, alternativamente você pode contribuir com um "presente em envelope" para a nossa vida juntos &ndash; e traga junto o seu livro favorito como presente, para que nossa biblioteca familiar tenha um exemplar que sempre nos faça lembrar de você!</p>
 
 {% if msg %}
 <pre>{{ items }}</pre>
@@ -13,7 +13,7 @@
     <table class="table table-condensed">
         <tr class="active">
             <th>Presente</th>
-            <th>Presenteado?</th>
+            <th>Reservado?</th>
             <th>Presenteado por</th>
             <th>Data da Reserva</th>
         </tr>
