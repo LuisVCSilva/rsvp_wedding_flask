@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ana Luísa e Luis Vinicius</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Casamento da Ana Luísa e do Luis Vinicius" />
     <meta property="og:description" content="Junte-se a nós para celebrar nosso casamento! Encontre aqui informações sobre a cerimônia, festa e lista de presentes." />
-<meta property="og:image" content="{{ url_for('static', filename='img/final_1.png', _external=True) }}" />
+    <meta property="og:image" content="{{ url_for('static', filename='img/final_1.png', _external=True) }}" />
     <meta property="og:url" content="https://luisvcsilva.pythonanywhere.com/" />
     <meta property="og:type" content="website" />
 
@@ -35,13 +36,19 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url_for('home') }}">Casamento da Ana e do Luis</a>
+
+	<a class="navbar-brand" href="{{ url_for('home') }}">
+	    <i class="fas fa-heart fa-lg" style="color: red;"></i>
+	</a>
+
+
           </div>
 
           <div class="collapse navbar-collapse" id="wedsite-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li{% if home %} class="active"{% endif %}><a href="{{ url_for('home') }}">Início</a></li>
               <li{% if wishlist %} class="active"{% endif %}><a href="{{ url_for('wishlist') }}">Lista de Presentes</a></li>
+              <li{% if cerimonia %} class="active"{% endif %}><a href="{{ url_for('rsvp') }}">Convidados</a></li>
               <li{% if cerimonia %} class="active"{% endif %}><a href="{{ url_for('cerimonia') }}">Festa</a></li>
               <li{% if local %} class="active"{% endif %}><a href="{{ url_for('local') }}">Igreja</a></li>
               <li{% if contato %} class="active"{% endif %}><a href="{{ url_for('contato') }}">Contato</a></li>
@@ -56,6 +63,13 @@
         <div class="col-md-3"></div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <!--<footer class="footer">
+      <div class="container">
+        <p class="text-center">Desenvolvido por <a href="https://luisvcsilva.netlify.app">Luis Vinicius Costa Silva</a> -- Todos os direitos reservados &copy; 2025</p>
+      </div>
+    </footer> -->
   </body>
 </html>
 

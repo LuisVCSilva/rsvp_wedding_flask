@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {% block payload %}
 <h1>RSVP</h1>
+<center><h2>(répondez s'il vous plaît)</h2></center>
+<center><h3>Confirmação de presença<h3></center>
 <p>Ao preencher os campos abaixo, você nos ajuda a garantir que no dia do nosso casamento não apenas nós nos divirtamos, mas você também. Por favor, informe seu nome, se poderá estar presente nas cerimônias e no jantar que se seguirá. Caso necessite de um menu especial, pedimos que também nos informe preenchendo os campos adequados.</p>
 {% if success %}<div class="alert alert-success">Obrigado pela confirmação, esperamos você com muito carinho no grande dia!</div>{% else %}
 {% if invalid %}<div class="alert alert-danger">O campo de nome é obrigatório, assim como marcar pelo menos uma atividade!</div>{% endif %}
@@ -12,8 +14,7 @@
   <div class="form-group">
     Gostaria(mos) de participar de:
     <div>
-      {% for key, label in (('cerimonia', 'festa'), ('local', 'cerimônia religiosa'),
-                            ('vacsora', 'jantar')): %}
+      {% for key, label in (('cerimonia', 'Festa'), ('local', 'Cerimônia Religiosa')): %}
       <label class="checkbox-inline">
         <input type="checkbox" value="1" name="{{ key }}"{% if key in fields %}checked{% endif %}> {{ label }}
       </label>
@@ -21,7 +22,7 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="notes">Requisitos especiais <small>(menu vegetariano, sem glúten, infantil, outras observações)</small></label>
+    <label for="notes">Observações<small>(restrições alimentares, etc.)</small></label>
     <textarea class="form-control" id="notes" name="notes" rows="4">{{ fields.notes }}</textarea>
   </div>
   <button type="submit" class="btn btn-primary center-block">Enviar</button>

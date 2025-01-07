@@ -11,6 +11,13 @@ body {
   background-size: cover;
 }
 
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Prevents fixed background on small screens */
+    background-position: center center; /* Ensures the background stays centered */
+  }
+}
+
 nav, #payload {
   font-family: 'Junicode';
   font-size: 120%;
