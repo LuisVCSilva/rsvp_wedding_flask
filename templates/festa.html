@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block payload %}
+<h1>Festa</h1>
+<p>A festa será realizada na Sala de Reuniões da Prefeitura de Lorem Ipsum, às 13 horas. Após a cerimônia, caminharemos juntos para o local da <a href="{{ url_for('local') }}">cerimônia religiosa</a>.</p>
+<dl class="dl-horizontal">
+	<dt>Endereço</dt>
+	<dd>1234 Lorem, Rua Ipsum, 5</dd>
+	<dt>GPS</dt>
+	<dd>47.654321, 19.87654
+	<small>(<a href="http://www.openstreetmap.org/?mlat=47.65432&amp;mlon=19.87654#map=17/47.65432/19.87654&amp;layers=Q">Abrir mapa maior</a>)</small></dd>
+</dl>
+<iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=19.63352379798889%2C47.654504862074994%2C19.641377305984494%2C47.658572973183525&amp;layer=mapquest&amp;marker=47.6545353312315%2C19.876450551986694" id="osmap"></iframe>
+<h2>Como chegar?</h2>
+<p>A sala de casamento está localizada perto da Praça Ipsum Dolor. É possível estacionar nas ruas próximas &ndash; gratuitamente aos finais de semana.</p>
+<h3>Acesso por transporte público</h3>
+<ul>
+	<li>Ônibus 53, 86, 88, 150, 150E, 153, 172E, 188E, 212, 240E, 258, 258A, 272: parada Praça Ipsum Dolor, a 3 minutos a pé</li>
+	<li>Bondes 19, 49: parada Praça Ipsum Dolor, a 5 minutos a pé</li>
+</ul>
+{% endblock %}
+

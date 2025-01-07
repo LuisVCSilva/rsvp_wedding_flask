@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block payload %}
+<h1>Lista de Presentes</h1>
+<p>Para completar o nosso lar, ainda faltam algumas coisas, que vocês podem encontrar na lista de presentes abaixo. Os itens podem ser reservados, garantindo que não receberemos o mesmo presente mais de uma vez. Além disso, há algumas coisas que gostaríamos de escolher pessoalmente.</p>
+<p>Por isso, pedimos que, caso não encontre algo na nossa lista que gostaria de nos presentear, contribua com um "presente em envelope" para a nossa vida juntos &ndash; e traga junto o seu livro favorito como presente, para que nossa biblioteca familiar tenha um exemplar que sempre nos faça lembrar de você!</p>
+{% if msg %}
+<pre>{{ items }}</pre>
+<div class="alert alert-{% if success %}success{% else %}danger{% endif %}">{{ msg }}</div>
+{% endif %}
+<form action="" method="post">
+    <table class="table table-condensed">
+        <tr class="active">
+            <th>Presente</th>
+            <th>Descrição</th>
+            <th>Link</th>
+            <th>Reservado?</th>
+            <th>Reservado por</th>
+            <th>Data da Reserva</th>
+        </tr>
+        {% for id, label, desc, link, booked, reserver, reservation_date in items %}
+        <tr class="{% if booked %}danger{% else %}success{% endif %}">
+            <td>{{ label }}</td>
+            <td>{{ desc }}</td>
+            <td><a href="{{ link }}" rel="nofollow" target="_blank">Link</a></td>
+            <td class="book-gift-column">
+                {% if booked %}
+                <span class="label label-danger">Reservado</span>
+                {% else %}
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="" name="{{ id }}"
+                    {% if id in checked %}checked{% endif %}><small>reservar</small>
+                </label>
+                {% endif %}
+            </td>
+            <td>{% if booked %}{{ reserver }}{% else %}N/A{% endif %}</td>
+            <td>{% if booked %}{{ reservation_date }}{% else %}N/A{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="input-group">
+        <span class="input-group-addon">Seu nome</span>
+        <input type="text" class="form-control" name="name" value="{{ name }}">
+        <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary">Reservar</button>
+        </span>
+    </div>
+</form>
+{% endblock %}
+

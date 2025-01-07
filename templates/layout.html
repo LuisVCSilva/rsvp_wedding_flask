@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ana Luísa e Luis Vinicius</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/wedsite.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    <script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#wedsite-navbar-collapse-1">
+              <span class="sr-only">Ocultar/Mostrar menu</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('home') }}">Casamento da Ana e do Luis</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="wedsite-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li{% if home %} class="active"{% endif %}><a href="{{ url_for('home') }}">Início</a></li>
+              <li{% if wishlist %} class="active"{% endif %}><a href="{{ url_for('wishlist') }}">Lista de Presentes</a></li>
+              <li{% if cerimonia %} class="active"{% endif %}><a href="{{ url_for('cerimonia') }}">Festa</a></li>
+              <li{% if local %} class="active"{% endif %}><a href="{{ url_for('local') }}">Igreja</a></li>
+              <li{% if contato %} class="active"{% endif %}><a href="{{ url_for('contato') }}">Contato</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" id="payload">{% block payload %}{% endblock %}</div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
