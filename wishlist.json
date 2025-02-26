@@ -4,27 +4,27 @@
         "label": "Geladeira",
         "desc": "Geladeira",
         "link": "https://example.com/geladeira",
-        "booked": true,
-        "reserver": "Luis",
-        "reservation_date": "2025-02-26"
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
     },
     {
         "id": 2,
         "label": "Sofá",
         "desc": "Sofá",
         "link": "https://example.com/sofa",
-        "booked": true,
-        "reserver": "Ana",
-        "reservation_date": "2025-02-26"
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
     },
     {
         "id": 3,
         "label": "TV (32 a 43)",
         "desc": "TV entre 32 e 43 polegadas",
         "link": "https://example.com/tv",
-        "booked": true,
-        "reserver": "Ana",
-        "reservation_date": "2025-02-26"
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
     },
     {
         "id": 4,
@@ -88,5 +88,15 @@
         "booked": false,
         "reserver": null,
         "reservation_date": null
+    },
+    {
+        "id": 11,
+        "label": "Ferro de passar roupa",
+        "desc": "Ferro de passar roupa",
+        "link": "https://example.com/ferro-passar-roupa",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
     }
 ]
+
