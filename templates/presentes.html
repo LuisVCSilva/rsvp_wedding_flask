@@ -5,7 +5,6 @@
 <p>Caso queira, alternativamente você pode contribuir com um "presente em envelope" para a nossa vida juntos &ndash; e traga junto o seu livro favorito como presente, para que nossa biblioteca familiar tenha um exemplar que sempre nos faça lembrar de você!</p>
 
 {% if msg %}
-<pre>{{ items }}</pre>
 <div class="alert alert-{% if success %}success{% else %}danger{% endif %}">{{ msg }}</div>
 {% endif %}
 
@@ -17,21 +16,21 @@
             <th>Presenteado por</th>
             <th>Data da Reserva</th>
         </tr>
-        {% for id, label, booked, reserver, reservation_date in items %}
-        <tr class="{% if booked %}danger{% else %}success{% endif %}">
-            <td>{{ label }}</td>
+        {% for item in items %}
+        <tr class="{% if item.booked %}danger{% else %}success{% endif %}">
+            <td>{{ item.label }}</td>
             <td class="book-gift-column">
-                {% if booked %}
+                {% if item.booked %}
                 <span class="label label-danger">Presenteado</span>
                 {% else %}
                 <label class="checkbox-inline">
-                    <input type="checkbox" value="" name="{{ id }}"
-                    {% if id in checked %}checked{% endif %}><small>reservar</small>
+                    <input type="checkbox" value="" name="{{ item.id }}"
+                    {% if item.id in checked %}checked{% endif %}><small>reservar</small>
                 </label>
                 {% endif %}
             </td>
-            <td>{% if booked %}{{ reserver }}{% else %}?{% endif %}</td>
-            <td>{% if booked %}{{ reservation_date }}{% else %}?{% endif %}</td>
+            <td>{% if item.booked %}{{ item.reserver }}{% else %}?{% endif %}</td>
+            <td>{% if item.booked %}{{ item.reservation_date }}{% else %}?{% endif %}</td>
         </tr>
         {% endfor %}
     </table>
@@ -50,6 +49,10 @@
     .danger {
         background-color: #f8d7da !important;
         color: #721c24 !important;
+    }
+    .success {
+        background-color: #d4edda !important;
+        color: #155724 !important;
     }
 </style>
 {% endblock %}

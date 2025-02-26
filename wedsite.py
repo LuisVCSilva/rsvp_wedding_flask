@@ -4,7 +4,7 @@
 from flask import Flask, render_template, redirect, url_for, request
 from contextlib import closing
 from base64 import b64encode
-import sqlite3, re
+import sqlite3, re, json
 
 app = Flask(__name__)
 
@@ -101,46 +101,43 @@ def bad_request(e):
 
 # CREATE TABLE wishlist (id INTEGER PRIMARY KEY AUTOINCREMENT, label, desc, link, booked, changed);
 
+
+def load_wishlist():
+    with open('wishlist.json', 'r', encoding='utf-8') as file:
+        items = json.load(file)
+    return items
+
 @app.route('/presentes.html', methods=['GET', 'POST'])
 def wishlist():
     name = request.form.get('name', '')
-    checked = [int(key) for key in request.form.keys() if re.match(r'^\d+$', key)]  # Alterado aqui
+    checked = [int(key) for key in request.form.keys() if key.isdigit()]
     msg = None
     success = False
 
-    # Conectando ao banco de dados
-    with closing(sqlite3.connect('wishlist.sqlite3')) as db:
-        cur = db.cursor()
-        with db:
-            if request.method == 'POST':
-                if not name:
-                    msg = u'Por favor, forneça seu nome'
-                elif not checked:
-                    msg = u'Por favor, marque pelo menos um presente'
-                else:
-                    # Obter os nomes dos presentes selecionados
-                    cur.execute('SELECT id, label FROM wishlist WHERE id IN ({})'.format(','.join('?' for _ in checked)), checked)
-                    reserved_items = cur.fetchall()
-                    
-                    # Obter os nomes dos presentes reservados
-                    reserved_names = [item[1] for item in reserved_items]
-                    
-                    # Criar a mensagem com os nomes dos presentes reservados
-                    msg = u'Você presenteou com sucesso o(s) presente(s) selecionado(s): ' + ', '.join(reserved_names) + '. Obrigado :)'
-                    
-                    # Atualizando o banco de dados
-                    cur.executemany('''UPDATE wishlist SET 
-                        booked = ?, 
-                        reserver = ?, 
-                        reservation_date = CURRENT_TIMESTAMP, 
-                        changed = CURRENT_TIMESTAMP 
-                        WHERE id = ? AND booked IS NULL''',
-                        [(1, name, item) for item in checked])
-                    
-                    success = True
+    # Carregar os itens da wishlist do arquivo JSON
+    items = load_wishlist()
 
-            # Obtendo os itens da lista de presentes
-            items = cur.execute('SELECT id, label, booked, reserver, reservation_date FROM wishlist').fetchall()
+    if request.method == 'POST':
+        if not name:
+            msg = 'Por favor, forneça seu nome'
+        elif not checked:
+            msg = 'Por favor, marque pelo menos um presente'
+        else:
+            # Atualizar os itens no JSON
+            for item in items:
+                if item['id'] in checked and not item['booked']:
+                    item['booked'] = True
+                    item['reserver'] = name
+                    item['reservation_date'] = '2025-02-26'  # Defina aqui a data real da reserva
+
+            # Salvar os itens atualizados de volta no arquivo JSON
+            with open('wishlist.json', 'w', encoding='utf-8') as file:
+                json.dump(items, file, ensure_ascii=False, indent=4)
+
+            reserved_items = [item for item in items if item['id'] in checked]
+            reserved_names = [item['label'] for item in reserved_items]
+            msg = f'Você presenteou com sucesso: {", ".join(reserved_names)}. Obrigado :)'
+            success = True
 
     return render_template('presentes.html', wishlist=True, items=items,
                            name=name, checked=checked, msg=msg, success=success)
