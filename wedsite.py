@@ -4,6 +4,7 @@
 from flask import Flask, render_template, redirect, url_for, request
 from contextlib import closing
 from base64 import b64encode
+from datetime import datetime
 import sqlite3, re, json
 
 app = Flask(__name__)
@@ -107,6 +108,16 @@ def load_wishlist():
         items = json.load(file)
     return items
 
+def save_wishlist(items):
+    """Salva a wishlist no arquivo JSON e registra a data/hora da última atualização."""
+    with open('wishlist.json', 'w', encoding='utf-8') as file:
+        json.dump(items, file, ensure_ascii=False, indent=4)
+
+    # Criar e salvar o timestamp
+    timestamp_data = {"last_updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+    with open('wishlist_timestamp.json', 'w', encoding='utf-8') as timestamp_file:
+        json.dump(timestamp_data, timestamp_file, ensure_ascii=False, indent=4)
+
 @app.route('/presentes.html', methods=['GET', 'POST'])
 def wishlist():
     name = request.form.get('name', '')
@@ -128,11 +139,10 @@ def wishlist():
                 if item['id'] in checked and not item['booked']:
                     item['booked'] = True
                     item['reserver'] = name
-                    item['reservation_date'] = '2025-02-26'  # Defina aqui a data real da reserva
+                    item['reservation_date'] = datetime.now().strftime('%Y-%m-%d')
 
-            # Salvar os itens atualizados de volta no arquivo JSON
-            with open('wishlist.json', 'w', encoding='utf-8') as file:
-                json.dump(items, file, ensure_ascii=False, indent=4)
+            # Salvar a wishlist e o timestamp
+            save_wishlist(items)
 
             reserved_items = [item for item in items if item['id'] in checked]
             reserved_names = [item['label'] for item in reserved_items]
@@ -141,6 +151,7 @@ def wishlist():
 
     return render_template('presentes.html', wishlist=True, items=items,
                            name=name, checked=checked, msg=msg, success=success)
+
 
 
 FIELDS = ('names', 'notes')
