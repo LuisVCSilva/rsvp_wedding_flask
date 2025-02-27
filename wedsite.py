@@ -109,14 +109,14 @@ def load_wishlist():
     return items
 
 def save_wishlist(items):
-    """Salva a wishlist no arquivo JSON e registra a data/hora da última atualização."""
-    with open('wishlist.json', 'w', encoding='utf-8') as file:
+    """Salva a wishlist em um novo arquivo com um timestamp no nome."""
+    timestamp = int(time.time())  # Pega o timestamp atual em Unix time
+    filename = f'wishlist_{timestamp}.json'  # Nome do arquivo com timestamp
+
+    with open(filename, 'w', encoding='utf-8') as file:
         json.dump(items, file, ensure_ascii=False, indent=4)
 
-    # Criar e salvar o timestamp
-    timestamp_data = {"last_updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-    with open('wishlist_timestamp.json', 'w', encoding='utf-8') as timestamp_file:
-        json.dump(timestamp_data, timestamp_file, ensure_ascii=False, indent=4)
+    print(f'Wishlist salva em: {filename}')
 
 @app.route('/presentes.html', methods=['GET', 'POST'])
 def wishlist():
