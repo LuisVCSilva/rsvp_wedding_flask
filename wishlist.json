@@ -1,54 +1,54 @@
 [
     {
         "id": 1,
-        "label": "Geladeira",
-        "desc": "Geladeira",
-        "link": "https://example.com/geladeira",
+        "label": "Almofadas (2 unidades)",
+        "desc": "Almofadas para sofá (2 unidades)",
+        "link": "https://example.com/almofadas",
         "booked": false,
         "reserver": null,
         "reservation_date": null
     },
     {
         "id": 2,
-        "label": "Micro-ondas",
-        "desc": "Micro-ondas",
-        "link": "https://example.com/microondas",
+        "label": "Aspirador de pó",
+        "desc": "Aspirador de pó",
+        "link": "https://example.com/aspirador-po",
         "booked": false,
         "reserver": null,
         "reservation_date": null
     },
     {
         "id": 3,
-        "label": "Liquidificador",
-        "desc": "Liquidificador",
-        "link": "https://example.com/liquidificador",
+        "label": "Armário ou prateleiras",
+        "desc": "Armário ou prateleiras",
+        "link": "https://example.com/armario-prateleiras",
         "booked": false,
         "reserver": null,
         "reservation_date": null
     },
     {
         "id": 4,
-        "label": "Travesseiros",
-        "desc": "Travesseiros",
-        "link": "https://example.com/travesseiros",
+        "label": "Cortina de banho",
+        "desc": "Cortina de banho",
+        "link": "https://example.com/cortina-banho",
         "booked": false,
         "reserver": null,
         "reservation_date": null
     },
     {
         "id": 5,
-        "label": "Colchão",
-        "desc": "Colchão",
-        "link": "https://example.com/colchao",
+        "label": "Cortinas",
+        "desc": "Cortinas para a sala de estar",
+        "link": "https://example.com/cortinas",
         "booked": false,
         "reserver": null,
         "reservation_date": null
     },
     {
         "id": 6,
-        "label": "Roupa de cama",
-        "desc": "Lençóis, cobertor, edredom",
-        "link": "https://example.com/roupa-de-cama",
+        "label": "Geladeira",
+        "desc": "Geladeira",
+        "link": "https://example.com/geladeira",
         "booked": false,
         "reserver": null,
         "reservation_date": null
@@ -64,141 +64,6 @@
     },
     {
         "id": 8,
-        "label": "Toalhas",
-        "desc": "Toalhas",
-        "link": "https://example.com/toalhas",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 9,
-        "label": "Cortina de banho",
-        "desc": "Cortina de banho",
-        "link": "https://example.com/cortina-banho",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 10,
-        "label": "Armário ou prateleiras",
-        "desc": "Armário ou prateleiras",
-        "link": "https://example.com/armario-prateleiras",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 11,
-        "label": "Itens de higiene",
-        "desc": "Cesta, tapetes, saboneteira, etc.",
-        "link": "https://example.com/itens-higiene",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 12,
-        "label": "Máquina de lavar roupas",
-        "desc": "Máquina de lavar roupas",
-        "link": "https://example.com/maquina-lavar-roupas",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 13,
-        "label": "Mesa de jantar (4 cadeiras)",
-        "desc": "Mesa de jantar com 4 cadeiras",
-        "link": "https://example.com/mesa-jantar",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 14,
-        "label": "Sofá",
-        "desc": "Sofá",
-        "link": "https://example.com/sofa",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 15,
-        "label": "TV (32 a 43 polegadas)",
-        "desc": "TV entre 32 e 43 polegadas",
-        "link": "https://example.com/tv",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 16,
-        "label": "Rack ou painel para TV",
-        "desc": "Rack ou painel para TV",
-        "link": "https://example.com/rack",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 17,
-        "label": "Cortinas",
-        "desc": "Cortinas para a sala de estar",
-        "link": "https://example.com/cortinas",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 18,
-        "label": "Almofadas (2 unidades)",
-        "desc": "Almofadas para sofá (2 unidades)",
-        "link": "https://example.com/almofadas",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 19,
-        "label": "Aspirador de pó",
-        "desc": "Aspirador de pó",
-        "link": "https://example.com/aspirador-po",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 20,
-        "label": "Produtos de limpeza básicos",
-        "desc": "Vassoura, rodo, balde, pano de chão, etc.",
-        "link": "https://example.com/produtos-limpeza",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 21,
-        "label": "Organizadores",
-        "desc": "Gavetas, caixas para armazenar",
-        "link": "https://example.com/organizadores",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 22,
-        "label": "Lixeiras",
-        "desc": "Lixeiras (cozinha, banheiro e área externa)",
-        "link": "https://example.com/lixeiras",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 23,
         "label": "Lâmpadas",
         "desc": "Lâmpadas (6 unidades)",
         "link": "https://example.com/lampadas",
@@ -207,25 +72,79 @@
         "reservation_date": null
     },
     {
-        "id": 24,
-        "label": "Fechadura reforçada",
-        "desc": "Fechadura reforçada",
-        "link": "https://example.com/fechadura-reforcada",
+        "id": 9,
+        "label": "Lixeiras",
+        "desc": "Lixeiras (cozinha, banheiro e área externa)",
+        "link": "https://example.com/lixeiras",
         "booked": false,
         "reserver": null,
         "reservation_date": null
     },
     {
-        "id": 25,
-        "label": "Escova de limpeza para banheiro",
-        "desc": "Escova de limpeza para banheiro",
-        "link": "https://example.com/escova-limpeza-banheiro",
+        "id": 10,
+        "label": "Liquidificador",
+        "desc": "Liquidificador",
+        "link": "https://example.com/liquidificador",
         "booked": false,
         "reserver": null,
         "reservation_date": null
     },
     {
-        "id": 26,
+        "id": 11,
+        "label": "Micro-ondas",
+        "desc": "Micro-ondas",
+        "link": "https://example.com/microondas",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 12,
+        "label": "Mesa de jantar (4 cadeiras)",
+        "desc": "Mesa de jantar com 4 cadeiras",
+        "link": "https://example.com/mesa-jantar",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 13,
+        "label": "Organizadores",
+        "desc": "Gavetas, caixas para armazenar",
+        "link": "https://example.com/organizadores",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 14,
+        "label": "Rack ou painel para TV",
+        "desc": "Rack ou painel para TV",
+        "link": "https://example.com/rack",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 15,
+        "label": "Roupa de cama",
+        "desc": "Lençóis, cobertor, edredom",
+        "link": "https://example.com/roupa-de-cama",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 16,
+        "label": "Sapateira",
+        "desc": "Sapateira",
+        "link": "https://example.com/sapateira",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 17,
         "label": "Sanduicheira",
         "desc": "Sanduicheira",
         "link": "https://example.com/sanduicheira",
@@ -234,12 +153,49 @@
         "reservation_date": null
     },
     {
-        "id": 27,
-        "label": "Sapateira",
-        "desc": "Sapateira",
-        "link": "https://example.com/sapateira",
+        "id": 18,
+        "label": "Toalhas",
+        "desc": "Toalhas",
+        "link": "https://example.com/toalhas",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 19,
+        "label": "Travesseiros",
+        "desc": "Travesseiros",
+        "link": "https://example.com/travesseiros",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 20,
+        "label": "TV (32 a 43 polegadas)",
+        "desc": "TV entre 32 e 43 polegadas",
+        "link": "https://example.com/tv",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 21,
+        "label": "Ventilador",
+        "desc": "Ventilador",
+        "link": "https://example.com/ventilador",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    }
+    {
+        "id": 22,
+        "label": "Aparador para sala",
+        "desc": "Aparador",
+        "link": "https://example.com/aparador",
         "booked": false,
         "reserver": null,
         "reservation_date": null
     }
 ]
+
