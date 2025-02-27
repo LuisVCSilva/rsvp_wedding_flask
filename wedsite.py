@@ -145,7 +145,7 @@ def wishlist():
 
 FIELDS = ('names', 'notes')
 EVENTS = ('local', 'cerimonia', 'vacsora')
-
+'''
 @app.route('/rsvp', methods=['GET', 'POST'])
 def rsvp():
     success = False
@@ -158,7 +158,7 @@ def rsvp():
     else:
         invalid = False
     return render_template('rsvp.html', invalid=invalid, success=success, fields=request.form)
-
+'''
 # CREATE TABLE rsvp (names, local, cerimonia, vacsora, notes, added);
 def save_rsvp():
     with closing(sqlite3.connect('rsvp.sqlite3')) as db:
