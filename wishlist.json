@@ -4,39 +4,21 @@
         "label": "Almofadas (2 unidades)",
         "desc": "Almofadas para sofá (2 unidades)",
         "link": "https://example.com/almofadas",
-        "booked": true,
-        "reserver": "teste",
-        "reservation_date": "2025-02-27"
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
     },
     {
         "id": 2,
         "label": "Aspirador de pó",
         "desc": "Aspirador de pó",
         "link": "https://example.com/aspirador-po",
-        "booked": true,
-        "reserver": "teste",
-        "reservation_date": "2025-02-27"
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
     },
     {
         "id": 3,
-        "label": "Armário ou prateleiras",
-        "desc": "Armário ou prateleiras",
-        "link": "https://example.com/armario-prateleiras",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 4,
-        "label": "Cortina de banho",
-        "desc": "Cortina de banho",
-        "link": "https://example.com/cortina-banho",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 5,
         "label": "Cortinas",
         "desc": "Cortinas para a sala de estar",
         "link": "https://example.com/cortinas",
@@ -45,70 +27,7 @@
         "reservation_date": null
     },
     {
-        "id": 6,
-        "label": "Geladeira",
-        "desc": "Geladeira",
-        "link": "https://example.com/geladeira",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 7,
-        "label": "Guarda-roupa",
-        "desc": "Guarda-roupa",
-        "link": "https://example.com/guarda-roupa",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 8,
-        "label": "Lâmpadas",
-        "desc": "Lâmpadas (6 unidades)",
-        "link": "https://example.com/lampadas",
-        "booked": true,
-        "reserver": "testesad",
-        "reservation_date": "2025-02-27"
-    },
-    {
-        "id": 9,
-        "label": "Lixeiras",
-        "desc": "Lixeiras (cozinha, banheiro e área externa)",
-        "link": "https://example.com/lixeiras",
-        "booked": true,
-        "reserver": "testesad",
-        "reservation_date": "2025-02-27"
-    },
-    {
-        "id": 10,
-        "label": "Liquidificador",
-        "desc": "Liquidificador",
-        "link": "https://example.com/liquidificador",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 11,
-        "label": "Micro-ondas",
-        "desc": "Micro-ondas",
-        "link": "https://example.com/microondas",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 12,
-        "label": "Mesa de jantar (4 cadeiras)",
-        "desc": "Mesa de jantar com 4 cadeiras",
-        "link": "https://example.com/mesa-jantar",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 13,
+        "id": 4,
         "label": "Organizadores",
         "desc": "Gavetas, caixas para armazenar",
         "link": "https://example.com/organizadores",
@@ -117,16 +36,7 @@
         "reservation_date": null
     },
     {
-        "id": 14,
-        "label": "Rack ou painel para TV",
-        "desc": "Rack ou painel para TV",
-        "link": "https://example.com/rack",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 15,
+        "id": 5,
         "label": "Roupa de cama",
         "desc": "Lençóis, cobertor, edredom",
         "link": "https://example.com/roupa-de-cama",
@@ -135,7 +45,7 @@
         "reservation_date": null
     },
     {
-        "id": 16,
+        "id": 6,
         "label": "Sapateira",
         "desc": "Sapateira",
         "link": "https://example.com/sapateira",
@@ -144,7 +54,7 @@
         "reservation_date": null
     },
     {
-        "id": 17,
+        "id": 7,
         "label": "Sanduicheira",
         "desc": "Sanduicheira",
         "link": "https://example.com/sanduicheira",
@@ -153,7 +63,7 @@
         "reservation_date": null
     },
     {
-        "id": 18,
+        "id": 8,
         "label": "Toalhas",
         "desc": "Toalhas",
         "link": "https://example.com/toalhas",
@@ -162,25 +72,7 @@
         "reservation_date": null
     },
     {
-        "id": 19,
-        "label": "Travesseiros",
-        "desc": "Travesseiros",
-        "link": "https://example.com/travesseiros",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 20,
-        "label": "TV (32 a 43 polegadas)",
-        "desc": "TV entre 32 e 43 polegadas",
-        "link": "https://example.com/tv",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
-    },
-    {
-        "id": 21,
+        "id": 9,
         "label": "Ventilador",
         "desc": "Ventilador",
         "link": "https://example.com/ventilador",
@@ -189,12 +81,228 @@
         "reservation_date": null
     },
     {
-        "id": 22,
-        "label": "Aparador para sala",
-        "desc": "Aparador",
-        "link": "https://example.com/aparador",
+        "id": 10,
+        "label": "Micro-ondas",
+        "desc": "Micro-ondas",
+        "link": "https://example.com/microondas",
         "booked": false,
         "reserver": null,
         "reservation_date": null
-    }
+    },
+    {
+        "id": 11,
+        "label": "Liquidificador",
+        "desc": "Liquidificador",
+        "link": "https://example.com/liquidificador",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 12,
+        "label": "Jogo de talheres",
+        "desc": "Jogo de talheres",
+        "link": "https://example.com/jogo-talheres",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 13,
+        "label": "Pratos",
+        "desc": "Pratos",
+        "link": "https://example.com/pratos",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 14,
+        "label": "Escorredor de arroz",
+        "desc": "Escorredor de arroz",
+        "link": "https://example.com/escorredor-arroz",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 15,
+        "label": "Escorredor de macarrão",
+        "desc": "Escorredor de macarrão",
+        "link": "https://example.com/escorredor-macarrao",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 16,
+        "label": "Escorredor de louças",
+        "desc": "Escorredor de louças",
+        "link": "https://example.com/escorredor-loucas",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 17,
+        "label": "Ralador",
+        "desc": "Ralador",
+        "link": "https://example.com/ralador",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 18,
+        "label": "Tábua de carne",
+        "desc": "Tábua de carne",
+        "link": "https://example.com/tabua-carne",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 19,
+        "label": "Batedeira",
+        "desc": "Batedeira",
+        "link": "https://example.com/batedeira",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 20,
+        "label": "Jogo de panelas",
+        "desc": "Jogo de panelas",
+        "link": "https://example.com/jogo-panelas",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 21,
+        "label": "Faqueiro",
+        "desc": "Faqueiro",
+        "link": "https://example.com/faqueiro",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 22,
+        "label": "Potes diversos",
+        "desc": "Potes diversos",
+        "link": "https://example.com/potes-diversos",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 23,
+        "label": "Mixer",
+        "desc": "Mixer",
+        "link": "https://example.com/mixer",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 24,
+        "label": "Panela de pressão",
+        "desc": "Panela de pressão",
+        "link": "https://example.com/panela-pressao",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 25,
+        "label": "Luva térmica",
+        "desc": "Luva térmica",
+        "link": "https://example.com/luva-termica",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 26,
+        "label": "Porta temperos",
+        "desc": "Porta temperos",
+        "link": "https://example.com/porta-temperos",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 27,
+        "label": "Formas de bolo",
+        "desc": "Formas de bolo",
+        "link": "https://example.com/formas-bolo",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 28,
+        "label": "Rolo de abrir massa",
+        "desc": "Rolo de abrir massa",
+        "link": "https://example.com/rolo-abir-massa",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 29,
+        "label": "Tabuleiro",
+        "desc": "Tabuleiro",
+        "link": "https://example.com/tabuleiro",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 30,
+        "label": "Ferro de passar roupa",
+        "desc": "Ferro de passar roupa",
+        "link": "https://example.com/ferro-passar-roupa",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 31,
+        "label": "Tábua de passar roupa",
+        "desc": "Tábua de passar roupa",
+        "link": "https://example.com/tabua-passar-roupa",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 32,
+        "label": "MOP",
+        "desc": "MOP",
+        "link": "https://example.com/mop",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 33,
+        "label": "Tapete",
+        "desc": "Tapete",
+        "link": "https://example.com/tapete",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    },
+    {
+        "id": 34,
+        "label": "Cafeteira",
+        "desc": "Cafeteira elétrica",
+        "link": "https://example.com/cafeteira",
+        "booked": false,
+        "reserver": null,
+        "reservation_date": null
+    }    
 ]
