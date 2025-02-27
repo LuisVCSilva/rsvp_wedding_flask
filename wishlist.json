@@ -265,9 +265,9 @@
         "label": "Ferro de passar roupa",
         "desc": "Ferro de passar roupa",
         "link": "https://example.com/ferro-passar-roupa",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
+        "booked": true,
+        "reserver": "Luis Vinicius",
+        "reservation_date": "2025-02-27"
     },
     {
         "id": 31,
