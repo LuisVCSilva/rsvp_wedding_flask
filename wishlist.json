@@ -4,18 +4,18 @@
         "label": "Almofadas (2 unidades)",
         "desc": "Almofadas para sofá (2 unidades)",
         "link": "https://example.com/almofadas",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
+        "booked": true,
+        "reserver": "teste",
+        "reservation_date": "2025-02-27"
     },
     {
         "id": 2,
         "label": "Aspirador de pó",
         "desc": "Aspirador de pó",
         "link": "https://example.com/aspirador-po",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
+        "booked": true,
+        "reserver": "teste",
+        "reservation_date": "2025-02-27"
     },
     {
         "id": 3,
@@ -67,18 +67,18 @@
         "label": "Lâmpadas",
         "desc": "Lâmpadas (6 unidades)",
         "link": "https://example.com/lampadas",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
+        "booked": true,
+        "reserver": "testesad",
+        "reservation_date": "2025-02-27"
     },
     {
         "id": 9,
         "label": "Lixeiras",
         "desc": "Lixeiras (cozinha, banheiro e área externa)",
         "link": "https://example.com/lixeiras",
-        "booked": false,
-        "reserver": null,
-        "reservation_date": null
+        "booked": true,
+        "reserver": "testesad",
+        "reservation_date": "2025-02-27"
     },
     {
         "id": 10,
@@ -198,4 +198,3 @@
         "reservation_date": null
     }
 ]
-

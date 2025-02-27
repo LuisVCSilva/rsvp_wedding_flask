@@ -5,7 +5,7 @@ from flask import Flask, render_template, redirect, url_for, request
 from contextlib import closing
 from base64 import b64encode
 from datetime import datetime
-import sqlite3, re, json
+import sqlite3, re, json, time
 
 app = Flask(__name__)
 
@@ -109,14 +109,20 @@ def load_wishlist():
     return items
 
 def save_wishlist(items):
-    """Salva a wishlist em um novo arquivo com um timestamp no nome."""
-    timestamp = int(time.time())  # Pega o timestamp atual em Unix time
-    filename = f'wishlist_{timestamp}.json'  # Nome do arquivo com timestamp
-
-    with open(filename, 'w', encoding='utf-8') as file:
+    """Salva a wishlist atualizada e cria um backup com timestamp"""
+    
+    # Salvar a wishlist padrão
+    with open('wishlist.json', 'w', encoding='utf-8') as file:
         json.dump(items, file, ensure_ascii=False, indent=4)
 
-    print(f'Wishlist salva em: {filename}')
+    # Criar um backup com timestamp (Unix time)
+    timestamp = int(time.time())  # Obtém o timestamp atual em segundos
+    backup_filename = f'wishlist_{timestamp}.json'
+
+    with open(backup_filename, 'w', encoding='utf-8') as backup_file:
+        json.dump(items, backup_file, ensure_ascii=False, indent=4)
+
+    print(f"Wishlist atualizada! Backup salvo como {backup_filename}")
 
 @app.route('/presentes.html', methods=['GET', 'POST'])
 def wishlist():
