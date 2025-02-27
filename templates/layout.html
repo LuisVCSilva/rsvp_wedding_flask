@@ -48,7 +48,6 @@
             <ul class="nav navbar-nav">
               <li{% if home %} class="active"{% endif %}><a href="{{ url_for('home') }}">Início</a></li>
               <li{% if wishlist %} class="active"{% endif %}><a href="{{ url_for('wishlist') }}">Lista de Presentes</a></li>
-              <li{% if cerimonia %} class="active"{% endif %}><a href="{{ url_for('rsvp') }}">Convidados</a></li>
               <li{% if cerimonia %} class="active"{% endif %}><a href="{{ url_for('cerimonia') }}">Festa</a></li>
               <li{% if local %} class="active"{% endif %}><a href="{{ url_for('local') }}">Igreja</a></li>
               <li{% if contato %} class="active"{% endif %}><a href="{{ url_for('contato') }}">Contato</a></li>
